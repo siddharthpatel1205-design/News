@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Admin लॉगिन | NEWSVERSE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="../css/global.css"><link rel="stylesheet" href="../css/auth.css"></head>
+<body><main class="auth"><h1>Admin लॉगिन</h1><p class="muted">सिर्फ़ अधिकृत admin के लिए।</p>
+<form id="af" novalidate><label>ईमेल<input name="email" type="email" autocomplete="username" required></label>
+<label>पासवर्ड<input name="password" type="password" autocomplete="current-password" required></label>
+<p id="msg" class="msg" role="alert"></p><button class="go" type="submit">लॉगिन करें</button></form></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script><script src="../js/auth.js"></script>
+<script>
+const m=document.getElementById("msg"),f=document.getElementById("af");
+(async()=>{ if(sb && await NVAuth.session()){ const p=await NVAuth.profile(); if(p&&p.role==="admin") location.replace("dashboard.html"); } })();
+f.addEventListener("submit",async e=>{e.preventDefault(); if(!sb) return showMsg(m,"Supabase अभी सेट नहीं है।");
+ const {error}=await sb.auth.signInWithPassword({email:f.email.value.trim(),password:f.password.value});
+ if(error) return showMsg(m,NVAuth.friendly(error));
+ const p=await NVAuth.profile(); if(!p||p.role!=="admin"){ await sb.auth.signOut(); return showMsg(m,"इस खाते को admin की अनुमति नहीं है।"); }
+ location.href="dashboard.html";});
+</script></body></html>
