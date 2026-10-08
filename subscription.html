@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सब्सक्रिप्शन | NEWSVERSE</title><meta name="theme-color" content="#0F4C81">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/news.css"></head>
+<body data-page="subscription"><main class="wrap" style="max-width:960px"><h1 class="pt">सब्सक्रिप्शन</h1>
+<div id="sub"></div><div id="status"></div><div id="trial"></div>
+<div class="dc"><h2>प्लान चुनें</h2><div class="row2"><label for="billing">बिलिंग:</label><select id="billing"><option value="monthly">Monthly (मासिक)</option><option value="annual">Annual (सालाना)</option></select></div>
+<div class="plans" id="plans"></div>
+<div class="row2"><label class="sr" for="code">कूपन कोड</label><input id="code" placeholder="कूपन कोड (वैकल्पिक)" maxlength="30" autocapitalize="characters"><button class="btn" id="apply" type="button">लागू करें</button></div>
+<p id="cmsg" class="msg" role="status"></p><div id="summary"></div>
+<p class="muted">भुगतान अभी सिर्फ़ डेमो है — असली पैसा नहीं कटता।</p></div></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script><script src="js/app.js"></script><script src="js/auth.js"></script><script src="js/site.js"></script><script src="js/news.js"></script><script src="js/layout.js"></script><script src="js/payment.js"></script><script src="js/subscription.js"></script></body></html>

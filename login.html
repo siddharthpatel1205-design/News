@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>लॉगिन | NEWSVERSE</title><meta name="theme-color" content="#0F4C81">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/auth.css"></head>
+<body><header class="top"><a class="brand" href="index.html"><span class="brand-mark">N</span>न्यूज़वर्स</a></header>
+<main class="auth"><h1>लॉगिन</h1><p class="muted">अपने खाते में वापस आएँ।</p>
+<form id="loginForm" novalidate>
+<label>ईमेल<input name="email" type="email" autocomplete="username" inputmode="email" required></label>
+<label>पासवर्ड<input name="password" type="password" autocomplete="current-password" required></label>
+<p id="msg" class="msg" role="alert"></p>
+<button class="go" type="submit">लॉगिन करें</button></form>
+<p class="alt">नया खाता चाहिए? <a href="signup.html">खाता बनाएँ</a></p></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script><script src="js/auth.js"></script><script src="js/site.js"></script></body></html>

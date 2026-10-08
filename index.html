@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>न्यूज़वर्स | NEWSVERSE</title>
+<meta name="theme-color" content="#0F4C81">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="NEWSVERSE home"><span class="brand-mark">N</span><span id="siteName">न्यूज़वर्स</span></a>
+  <form class="search" action="search.html" role="search">
+    <label class="sr" for="q">खोजें</label>
+    <input id="q" name="q" type="search" placeholder="खबर खोजें…" autocomplete="off">
+  </form>
+  <a class="btn" href="login.html" id="loginBtn">लॉगिन</a>
+</header>
+<nav class="cats" id="catNav" aria-label="श्रेणियाँ"></nav>
+<div class="ticker" role="status"><strong>ताज़ा खबर</strong><div class="ticker-track" id="ticker"></div></div>
+
+<main id="main" class="wrap">
+  <section class="lead" id="lead" aria-live="polite"><p class="muted">खबरें लोड हो रही हैं…</p></section>
+  <div id="sections"></div>
+</main>
+
+<footer class="foot"><p><a href="about.html">हमारे बारे में</a> • <a href="contact.html">संपर्क</a> • <a href="privacy.html">प्राइवेसी</a> • <a href="terms.html">नियम</a></p><p id="footerText">© NEWSVERSE — सैंपल सामग्री। असली खबरें Admin पैनल से जोड़ी जाएँगी।</p></footer>
+
+<nav class="bottom" aria-label="मुख्य मेनू">
+  <a href="index.html" class="on">होम</a><a href="category.html">श्रेणी</a><a href="video.html">वीडियो</a><a href="search.html">खोज</a><a href="dashboard.html">मेरा खाता</a>
+</nav>
+<a class="fab" href="messages.html" aria-label="संदेश भेजें">💬</a>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script><script src="js/site.js"></script>
+<script src="js/app.js"></script>
+<script src="js/news.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
